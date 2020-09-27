@@ -1,17 +1,28 @@
 import org.springframework.context.MessageSource;
+import java.util.Locale;
 public class BeanI18N{
-	
-	private MessageSource messagesource;
-	public void setMessageSource(MessageSource messagesource){
-		this.messagesource=messagesource;
+	/*
+	private message message;
+	public void setmessage(message message){
+		this.message=message;
 	}
+	*/
 	
-	public void displayMessage(){
-		System.out.println("Message : "+messagesource.getMessage("welcome", new Object[] {"it" ,"IT"}.					Locale.IT));
-		System.out.println("Message : "+messagesource.getMessage("welcome",new Object[]{"en","US"}.Locale.US));
+	private MessageSource message; 
+ 
+    public void setMessage(MessageSource message) { 
+        this.message = message; 
+    } 
+     
+
+public void displayMessage(){
+ 
 		
-		System.out.println("message : "+messagesource.getMessage("welcome",new Object[]{"in","IN"}.Locale.IN));
-	}
+System.out.println("Message :"+message.getMessage("welcome",new Object[]{"fr","FRANCE"},Locale.FRANCE)); 		
+		
+System.out.println("Message : "+message.getMessage("welcome",new Object[]{"en","US"},Locale.US));
+		
+ 	}
 	
 	
 	

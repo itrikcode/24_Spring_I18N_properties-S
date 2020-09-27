@@ -5,11 +5,11 @@
 		
 		
 		<bean id="beanI18N" class="BeanI18N">
-			<property name="messagesource" ref="resouceBundleMessageSource"/>
+			<property name="message" ref="resouceBundleMessageSource"/>
 		</bean>
 		
 		<bean id="resouceBundleMessageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-			<property name="basename" vale="abc"/>
+			<property name="basename" value="abc"/>
 		
 		</bean>
 
