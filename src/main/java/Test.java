@@ -4,7 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  public class Test{
  public static void main(String[] args){
 	 ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-	 BeanI18N b = context.getBean("beanI18N",BeanI18N.class);
+	 BeanI18N b = (BeanI18N)context.getBean("beanI18N");
 	 b.displayMessage();
  }
  }
